@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom Colors */
+  --color-primary: #0a192f;
+  --color-secondary: #ff6b00; 
+  --color-tertiary: #ccd6f6;
+  --color-darkSlate: #8892b0;
+
+  /* Custom Animations */
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  --animate-pulse-slow: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 1. Global Resets & Performance */
+:root {
+  background-color: #0a192f;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--color-tertiary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  background-color: transparent; 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Custom Text Selection (High-end touch) */
+::selection {
+  background-color: rgba(100, 255, 218, 0.2);
+  color: var(--color-secondary);
+}
+
+/* 3. Force Transparency on Containers */
+section {
+  background-color: transparent !important;
+}
+
+/* 4. Modern Slim Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #112240;
+  border-radius: 10px;
+  border: 2px solid var(--color-primary); /* Adds padding effect around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #233554;
+}
+
+/* 5. Glassmorphism Utility */
+.glass-card {
+  background: rgba(17, 34, 64, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.5);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--color-secondary);
+  background: rgba(17, 34, 64, 0.8);
+}
+
+/* 6. Professional Noise Texture Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  opacity: 0.02; /* Very subtle for professional look */
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
