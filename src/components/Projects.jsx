@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
-const API_URL = import.meta.env.VITE_API_URL
+const API_URL = import.meta.env.VITE_API_URL || 'https://portfolio-backend-zahoor.vercel.app/api'
 
 const fetchProjects = async () => {
     const { data } = await axios.get(`${API_URL}/projects`);
