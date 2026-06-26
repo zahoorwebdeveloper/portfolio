@@ -1,16 +1,120 @@
-# React + Vite
+```markdown
+# 👋 Hi, I'm Zahoor Ahmad
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio repository! This repository contains the source code for my portfolio website, where I showcase my projects, technical skills, experience, and achievements as a Software Engineer.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 **Portfolio:** https://your-portfolio-link.com
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 About the Project
 
-## Expanding the ESLint configuration
+This portfolio website is designed to present my professional profile in a clean and modern way. It highlights my technical expertise, featured projects, and provides an easy way for recruiters and collaborators to connect with me.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- 📱 Fully Responsive Design
+- 🎨 Modern & Clean User Interface
+- 👨‍💻 About Me Section
+- 🛠️ Skills & Technologies
+- 📂 Featured Projects
+- 📄 Resume Download
+- 📬 Contact Section
+- ⚡ Fast Performance
+- 🌙 Smooth Animations
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js *(if applicable)*
+- Tailwind CSS *(if applicable)*
+- React Quary *(if applicable)*
+- state managment
+### Tools
+- Git
+- GitHub
+- VS Code
+- Vite *(if applicable)*
+
+---
+
+## 📂 Project Structure
+
+```
+
+portfolio/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── README.md
+
+````
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/zahoorwebdev/portfolio.git
+````
+
+Navigate to the project folder:
+
+```bash
+cd portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 📸 Preview
+
+> Add screenshots or GIFs of your portfolio here.
+
+---
+
+## 📬 Contact
+
+* 📧 Email: zahoor.webdeveloper@gmail.com
+* 💼 LinkedIn: https://linkedin.com/in/your-profile
+* 🐙 GitHub: https://github.com/zahoorwebdev
+* 🌐 Portfolio: https://your-portfolio-link.com
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!
+
+```
+```
