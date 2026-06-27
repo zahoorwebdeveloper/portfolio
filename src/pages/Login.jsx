@@ -15,8 +15,9 @@ const Login = () => {
         setError('');
         setLoading(true);
 
+        const API_URL = import.meta.env.VITE_API_URL; 
         try {
-            const response = await axios.post('http://localhost:5000/api/login', {
+            const response = await axios.post(`${API_URL}/login`, {
                 username,
                 password
             });

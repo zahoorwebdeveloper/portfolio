@@ -19,14 +19,14 @@ const AdminDashboard = () => {
     });
 
     const token = localStorage.getItem('token');
-    const apiBase = "http://localhost:5000/api/projects";
+    const API_URL = import.meta.env.VITE_API_URL; 
     const getAuthHeader = () => ({ headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },});
 
     useEffect(() => { fetchProjects(); }, []);
 
     const fetchProjects = async () => {
         try {
-            const res = await axios.get(apiBase);
+            const res = await axios.get(`${API_URL}/projects`);
             setProjects(res.data);
         } catch (err) { console.error("Error fetching projects"); }
     };
@@ -47,10 +47,10 @@ const AdminDashboard = () => {
 
         try {
             if (editId) {
-                await axios.put(`${apiBase}/${editId}`, payload, getAuthHeader());
+                await axios.put(`${API_URL}/projects/${editId}`, payload, getAuthHeader());
                 alert("Project Updated!");
             } else {
-                await axios.post(apiBase, payload, getAuthHeader());
+                await axios.post(`${API_URL}/projects`, payload, getAuthHeader());
                 alert("Project Added!");
             }
 
@@ -68,7 +68,7 @@ const AdminDashboard = () => {
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure?")) {
             try {
-                await axios.delete(`${apiBase}/${id}`, getAuthHeader());
+                await axios.delete(`${API_URL}/projects/${id}`, getAuthHeader());
                 queryClient.invalidateQueries({ queryKey: ['projects'] });
                 fetchProjects();
             } catch (err) { alert("Delete failed"); }
